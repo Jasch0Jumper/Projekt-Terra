@@ -1,19 +1,13 @@
+using System;
 using UnityEngine;
 
 namespace Terra
 {
     public class AtomBehaviour : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        private void Update()
         {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
+            transform.RotateAround(transform.position, Vector3.up, 1f * Time.deltaTime);
         }
     }
 }
