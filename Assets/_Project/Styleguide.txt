@@ -1,0 +1,3 @@
+Proton: #000000
+Neutron: #000000
+Elektron: #000000
