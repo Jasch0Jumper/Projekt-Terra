@@ -6,8 +6,7 @@ namespace Terra
     {
         public ParticleData Data { get; }
         
-        public Vector3 Position { get; set; }
-        public Vector3 Velocity { get; set; }
-        
+        public Vector Position { get; set; }
+        public Vector Velocity { get; set; }
     }
 }

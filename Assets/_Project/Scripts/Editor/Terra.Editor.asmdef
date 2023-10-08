@@ -1,0 +1,17 @@
+{
+    "name": "Terra.Editor",
+    "rootNamespace": "Terra.Editor",
+    "references": [
+        "GUID:f4556b1fd27a6fb4580c7756659c2946",
+        "GUID:a529f3e0a352a6e45ac8a3905f8dbee0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

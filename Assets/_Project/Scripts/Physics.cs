@@ -10,7 +10,7 @@ namespace Terra
 
         private const float PERMEABILITY_OF_SPACE = Mathf.PI * 4f * 1e-7f;
 
-        public static void Step(List<IParticle> particles, float time)
+        public static void Step(List<IParticle> particles, Number time)
         {
             foreach (var particle in particles)
             {
@@ -25,18 +25,18 @@ namespace Terra
             }
         }
         
-        public static void UpdatePosition(IParticle particle, float time)
+        public static void UpdatePosition(IParticle particle, Number time)
         {
             particle.Position += particle.Velocity * time;
         }
         
-        public static Vector3 ApplyForce(IParticle particle, Vector3 force)
+        public static Vector3 ApplyForce(IParticle particle, Vector force)
         {
             var acceleration = force / particle.Data.Mass;
             return particle.Velocity += acceleration;
         }
         
-        public static Vector3 MagneticAttractionForce(IParticle p1, IParticle p2)
+        public static Vector MagneticAttractionForce(IParticle p1, IParticle p2)
         {
             var direction = p1.Position * Scale - p2.Position * Scale;
             var squaredDistance = direction.sqrMagnitude; 

@@ -9,11 +9,11 @@ namespace Terra
         
         public ParticleData Data => _data;
 
-        public Vector3 Position {
+        public Vector Position {
             get => transform.position;
             set => transform.position = value;
         }
 
-        public Vector3 Velocity { get; set; }
+        public Vector Velocity { get; set; }
     }
 }
