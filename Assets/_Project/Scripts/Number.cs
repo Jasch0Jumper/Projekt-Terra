@@ -28,8 +28,8 @@ namespace Terra
         {
             get
             {
-                var mantissa = (float)Math.Sqrt(Mantissa);
                 var modulo = Exponent % 2;
+                var mantissa = (float)Math.Sqrt(Mantissa * Math.Pow(10f, modulo));
                 var exponent = (sbyte)(Exponent / 2 + modulo);
                 return new Number(mantissa, exponent);
             }
