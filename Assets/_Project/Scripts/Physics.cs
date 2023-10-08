@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ namespace Terra
     {
         public static float Scale = 1f;
 
-        private const float PERMEABILITY_OF_SPACE = Mathf.PI * 4f; //* 1e-7f;
+        private const float PERMEABILITY_OF_SPACE = Mathf.PI * 4f * 1e-7f;
 
         public static void Step(List<IParticle> particles, float time)
         {
