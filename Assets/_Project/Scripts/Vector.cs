@@ -31,9 +31,9 @@ namespace Terra
         public Number Magnitude => SquareMagnitude.Sqrt;
         
         public Vector Normalized => this * (1 / SquareMagnitude.Sqrt);
-
         
         public override string ToString() => $"({X} | {Y} | {Z})";
+        public Vector3 ToVector3() => new Vector3(X.ToFloat(), Y.ToFloat(), Z.ToFloat());
         
         public bool Equals(Vector other) => X.Equals(other.X) && Y.Equals(other.Y) && Z.Equals(other.Z);
         public override bool Equals(object obj) => obj is Vector other && Equals(other);

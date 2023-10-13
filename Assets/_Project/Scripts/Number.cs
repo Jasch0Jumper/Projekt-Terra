@@ -96,5 +96,7 @@ namespace Terra
         
         public static bool operator ==(Number left, Number right) => left.Equals(right);
         public static bool operator !=(Number left, Number right) => !(left == right);
+
+        public float ToFloat() => (float)Math.Pow(Mantissa, Exponent);
     }
 }

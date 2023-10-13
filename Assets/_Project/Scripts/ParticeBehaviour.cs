@@ -10,8 +10,8 @@ namespace Terra
         public ParticleData Data => _data;
 
         public Vector Position {
-            get => transform.position;
-            set => transform.position = value;
+            get => new Vector(transform.position);
+            set => transform.position = value.ToVector3();
         }
 
         public Vector Velocity { get; set; }

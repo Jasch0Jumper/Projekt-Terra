@@ -30,7 +30,7 @@ namespace Terra
             particle.Position += particle.Velocity * time;
         }
         
-        public static Vector3 ApplyForce(IParticle particle, Vector force)
+        public static Vector ApplyForce(IParticle particle, Vector force)
         {
             var acceleration = force / particle.Data.Mass;
             return particle.Velocity += acceleration;
@@ -39,9 +39,9 @@ namespace Terra
         public static Vector MagneticAttractionForce(IParticle p1, IParticle p2)
         {
             var direction = p1.Position * Scale - p2.Position * Scale;
-            var squaredDistance = direction.sqrMagnitude; 
+            var squaredDistance = direction.SquareMagnitude; 
             var forceMagnitude = (PERMEABILITY_OF_SPACE * p1.Data.ElectricCharge * p2.Data.ElectricCharge) / (4f * Mathf.PI * squaredDistance);
-            return direction.normalized * forceMagnitude;
+            return direction.Normalized * forceMagnitude;
         }
     }
 }
