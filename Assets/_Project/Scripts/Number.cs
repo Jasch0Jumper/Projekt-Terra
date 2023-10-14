@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 namespace Terra
 {
@@ -6,9 +7,9 @@ namespace Terra
     public struct Number : IEquatable<Number>
     {
         private const sbyte EXPONENT_ROUNDING_CUTOFF = 10;
-        
-        public float Mantissa { get; set; } // 32 bits = 4 bytes = 6 Decimal Places Precision
-        public sbyte Exponent { get; set; } // 8 bits = 1 byte = ±2^7 = ±127
+
+        public float Mantissa; // 32 bits = 4 bytes = 6 Decimal Places Precision
+        public sbyte Exponent; // 8 bits = 1 byte = ±2^7 = ±127
         
         public Number(float mantissa, sbyte exponent = 0)
         {
@@ -28,7 +29,7 @@ namespace Terra
         {
             get
             {
-                var modulo = Exponent % 2;
+                var modulo = (sbyte)(Exponent % 2);
                 var mantissa = (float)Math.Sqrt(Mantissa * Math.Pow(10f, modulo));
                 var exponent = (sbyte)(Exponent / 2 + modulo);
                 return new Number(mantissa, exponent);
@@ -62,7 +63,7 @@ namespace Terra
         public override string ToString()
         {
             var symbol = Exponent < 0 ? "" : "+";
-            return $"{Mantissa}E{symbol}{Exponent}";
+            return $"{Mantissa.ToString(CultureInfo.InvariantCulture)}E{symbol}{Exponent.ToString()}";
         }
         
         public bool Equals(Number other) => Mantissa.Equals(other.Mantissa) && Exponent == other.Exponent;
@@ -96,7 +97,5 @@ namespace Terra
         
         public static bool operator ==(Number left, Number right) => left.Equals(right);
         public static bool operator !=(Number left, Number right) => !(left == right);
-
-        public float ToFloat() => (float)Math.Pow(Mantissa, Exponent);
     }
 }

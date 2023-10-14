@@ -2,8 +2,9 @@
     "name": "Terra.Editor",
     "rootNamespace": "Terra.Editor",
     "references": [
-        "GUID:f4556b1fd27a6fb4580c7756659c2946",
-        "GUID:a529f3e0a352a6e45ac8a3905f8dbee0"
+        "GUID:a529f3e0a352a6e45ac8a3905f8dbee0",
+        "GUID:295c5909407a1fa409ec7a1685e02cd5",
+        "GUID:c54128c16e5f9544e85f0b5fe15015d0"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
