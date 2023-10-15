@@ -4,7 +4,7 @@ using System.Globalization;
 namespace Terra
 {
     [Serializable]
-    public struct Number : IEquatable<Number>
+    public struct Number : IEquatable<Number> // 40 bits = 5 bytes = 6 Decimal Places Precision
     {
         private const sbyte EXPONENT_ROUNDING_CUTOFF = 10;
 
