@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Sanomic
 {
-    public struct Vector : IEquatable<Vector>
+    public struct Vector : IEquatable<Vector> // 15 bytes
     {
-        public Number X { get; set; }
-        public Number Y { get; set; }
-        public Number Z { get; set; }
+        public Number X; // 5 bytes
+        public Number Y; // 5 bytes
+        public Number Z; // 5 bytes
         
         public Vector(Vector3 vector)
         {

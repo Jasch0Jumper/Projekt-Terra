@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b574f951b22df154f84f99f43c0b923d, type: 3}
   m_Name: Elektron
   m_EditorClassIdentifier: 
-  Mass: 1
+  Mass:
+    Mantissa: 9.109384
+    Exponent: -31
   ElectricCharge: -1
