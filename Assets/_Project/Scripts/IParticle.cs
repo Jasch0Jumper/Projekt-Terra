@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace Terra
+namespace Sanomic
 {
     public interface IParticle
     {

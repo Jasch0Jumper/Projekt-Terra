@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Terra
+namespace Sanomic
 {
     [CreateAssetMenu(fileName = "Unit", menuName = "ScriptableObjects/Unit", order = 1)]
     public class Unit : ScriptableObject

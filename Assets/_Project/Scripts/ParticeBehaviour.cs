@@ -1,7 +1,6 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Terra
+namespace Sanomic
 {
     public class ParticeBehaviour: MonoBehaviour, IParticle
     {

@@ -2,7 +2,7 @@ using Jasch0Jumper.Unitytools;
 using UnityEditor;
 using UnityEngine;
 
-namespace Terra.Editor
+namespace Sanomic.Editor
 {
     [CustomPropertyDrawer(typeof(Number))]
     public class NumberPropertyDrawer : PropertyDrawer

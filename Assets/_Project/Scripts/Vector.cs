@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Terra
+namespace Sanomic
 {
     public struct Vector : IEquatable<Vector>
     {

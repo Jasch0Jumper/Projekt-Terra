@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Terra
+namespace Sanomic
 {
     public class NumbersTest : MonoBehaviour
     {

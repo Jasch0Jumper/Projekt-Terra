@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Terra
+namespace Sanomic
 {
     [CreateAssetMenu(fileName = "Particle", menuName = "ScriptableObjects/ParticleData", order = 1)]
     public class ParticleData: ScriptableObject

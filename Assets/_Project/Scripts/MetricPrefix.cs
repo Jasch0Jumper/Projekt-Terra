@@ -1,4 +1,4 @@
-namespace Terra
+namespace Sanomic
 {
     public enum MetricPrefix : sbyte
     {

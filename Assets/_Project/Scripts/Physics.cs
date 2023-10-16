@@ -1,8 +1,7 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Terra
+namespace Sanomic
 {
     public static class Physics
     {

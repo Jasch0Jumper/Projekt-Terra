@@ -1,7 +1,11 @@
 {
-    "name": "ProjektTerra",
-    "rootNamespace": "Terra",
-    "references": [],
+    "name": "Sanomic.Editor",
+    "rootNamespace": "Sanomic.Editor",
+    "references": [
+        "GUID:a529f3e0a352a6e45ac8a3905f8dbee0",
+        "GUID:295c5909407a1fa409ec7a1685e02cd5",
+        "GUID:c54128c16e5f9544e85f0b5fe15015d0"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

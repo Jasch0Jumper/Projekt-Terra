@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Terra
+namespace Sanomic
 {
     public class ElektronBehaviour : MonoBehaviour
     {

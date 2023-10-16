@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-namespace Terra
+namespace Sanomic
 {
     [Serializable]
     public struct Number : IEquatable<Number> // 40 bits = 5 bytes = 6 Decimal Places Precision
