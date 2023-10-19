@@ -2,17 +2,12 @@ using UnityEngine;
 
 namespace Sanomic
 {
-    public class ParticeBehaviour: MonoBehaviour, IParticle
+    public class ParticeBehaviour: MonoBehaviour
     {
         [SerializeField] private ParticleData _data;
+        public Particle Particle { get; set; }
         
         public ParticleData Data => _data;
-
-        public Vector Position {
-            get => new(transform.position);
-            set => transform.position = new Vector3(value.X.Mantissa, value.Y.Mantissa, value.Z.Mantissa);
-        }
-
-        public Vector Velocity { get; set; }
+        public Vector StartPosition => new(transform.position);
     }
 }

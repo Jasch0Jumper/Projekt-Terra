@@ -1,6 +1,6 @@
 namespace Sanomic
 {
-    public interface IParticle
+    public class Particle
     {
         public ParticleData Data { get; }
         

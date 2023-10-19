@@ -9,7 +9,7 @@ namespace Sanomic
 
         private const float PERMEABILITY_OF_SPACE = Mathf.PI * 4f * 1e-7f;
 
-        public static void Step(List<IParticle> particles, Number time)
+        public static void Step(List<Particle> particles, Number time)
         {
             foreach (var particle in particles)
             {
@@ -24,20 +24,20 @@ namespace Sanomic
             }
         }
         
-        public static void UpdatePosition(IParticle particle, Number time)
+        public static void UpdatePosition(Particle particle, Number time)
         {
             particle.Position += particle.Velocity * time;
         }
         
-        public static Vector ApplyForce(IParticle particle, Vector force)
+        public static void ApplyForce(Particle particle, Vector force)
         {
             var acceleration = force / particle.Data.Mass;
-            return particle.Velocity += acceleration;
+            particle.Velocity += acceleration;
         }
         
-        public static Vector MagneticAttractionForce(IParticle p1, IParticle p2)
+        public static Vector MagneticAttractionForce(Particle p1, Particle p2)
         {
-            var direction = p1.Position * Scale - p2.Position * Scale;
+            var direction = p1.Position - p2.Position;
             var squaredDistance = direction.SquareMagnitude; 
             var forceMagnitude = (PERMEABILITY_OF_SPACE * p1.Data.ElectricCharge * p2.Data.ElectricCharge) / (4f * Mathf.PI * squaredDistance);
             return direction.Normalized * forceMagnitude;

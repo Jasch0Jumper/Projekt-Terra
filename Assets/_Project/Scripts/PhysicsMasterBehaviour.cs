@@ -5,7 +5,7 @@ namespace Sanomic
 {
     public class PhysicsMasterBehaviour: MonoBehaviour
     {
-        [SerializeField] private List<ParticeBehaviour> particles;
+        [SerializeField] private List<ParticeBehaviour> visualizers;
         [Space]
         [SerializeField] [Range(0f, 1f)] private float simulationScale = 1;
         [Space]
@@ -15,13 +15,13 @@ namespace Sanomic
         [SerializeField] [Range(0, 200)] private int fixedUpdateCallsPerSecond = 50;
         [SerializeField] [Range(1, 10)] private int simulationStepsPerFrame = 1;
         
-        private List<IParticle> _particlesInterfaces = new();
+        private List<Particle> _particles = new();
         
         private void Awake()
         {
-            foreach (var particle in particles)
+            foreach (var particle in visualizers)
             {
-                _particlesInterfaces.Add(particle);
+                _particles.Add(particle);
             }
             
             Physics.Scale = simulationScale;
@@ -35,7 +35,7 @@ namespace Sanomic
             for (var i = 0; i < simulationStepsPerFrame; i++)
             {
                 var time = useCustomDeltaTime ? customDeltaTime : Time.deltaTime;
-                Physics.Step(_particlesInterfaces, time);
+                Physics.Step(_particles, time);
             }
         }
 
@@ -45,7 +45,7 @@ namespace Sanomic
             for (var i = 0; i < simulationStepsPerFrame; i++)
             {
                 var time = useCustomDeltaTime ? customDeltaTime : Time.fixedDeltaTime;
-                Physics.Step(_particlesInterfaces, time);
+                Physics.Step(_particles, time);
             }
         }
     }
