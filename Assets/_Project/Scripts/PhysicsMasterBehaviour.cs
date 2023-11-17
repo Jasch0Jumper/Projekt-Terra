@@ -21,7 +21,7 @@ namespace Sanomic
         {
             foreach (var particle in visualizers)
             {
-                _particles.Add(particle);
+                //_particles.Add(particle);
             }
             
             Physics.Scale = simulationScale;
